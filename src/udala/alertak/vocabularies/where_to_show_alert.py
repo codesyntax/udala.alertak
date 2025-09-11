@@ -10,14 +10,18 @@ from zope.schema.vocabulary import SimpleTerm
 from zope.schema.vocabulary import SimpleVocabulary
 
 
-class VocabItem(object):
+HOME = "home"
+ALL_SITE = "all_site"
+
+
+class VocabItem:
     def __init__(self, token, value):
         self.token = token
         self.value = value
 
 
 @implementer(IVocabularyFactory)
-class WhereToShowAlert(object):
+class WhereToShowAlert:
     """
     """
 
@@ -25,12 +29,10 @@ class WhereToShowAlert(object):
         # Just an example list of content for our vocabulary,
         # this can be any static or dynamic data, a catalog result for example.
         items = [
-            VocabItem(u'sony-a7r-iii', _(u'Sony Aplha 7R III')),
-            VocabItem(u'canon-5d-iv', _(u'Canon 5D IV')),
+            VocabItem(HOME, _(u'Home')),
+            VocabItem(ALL_SITE, _(u'Only site')),
         ]
 
-        # Fix context if you are using the vocabulary in DataGridField.
-        # See https://github.com/collective/collective.z3cform.datagridfield/issues/31:  # NOQA: 501
         if not IDexterityContent.providedBy(context):
             req = getRequest()
             context = req.PARENTS[0]

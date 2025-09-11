@@ -17,14 +17,10 @@
   <include file="permissions.zcml" />
 
   <include package=".behaviors" />
-  <include package=".controlpanels" />
-  <include package=".indexers" />
   <include package=".vocabularies" />
-  <include package=".browser" />
 
   <!-- -*- extra stuff goes here -*- -->
 
-    <include package=".vocabularies" />
-
+  <include package=".viewlets" />
 
 </configure>

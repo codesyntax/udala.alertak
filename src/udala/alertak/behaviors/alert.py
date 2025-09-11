@@ -11,6 +11,10 @@ from zope.interface import implementer
 from zope.interface import provider
 from udala.alertak import _
 from plone.app.textfield import RichText
+from udala.alertak.vocabularies.where_to_show_alert import HOME
+from plone.supermodel import model
+
+
 class IAlertMarker(Interface):
     pass
 
@@ -20,7 +24,22 @@ class IAlert(model.Schema):
     """
     """
 
-    show_alert = schema.Bool(
+    model.fieldset(
+        "alerts",
+        label=_("label_schema_alerts", default="Alerts"),
+        fields=[
+            "alert_show",
+            "alert_title",
+            "alert_text",
+            "alert_link",
+            "alert_link_text",
+            "alert_start_date",
+            "alert_end_date",
+            "alert_where_to_show",
+        ],
+    )
+
+    alert_show = schema.Bool(
         title=_('Show alert'),
         description=_('If checked, the alert will be shown in the site'),
         required=False,
@@ -78,14 +97,14 @@ class Alert(object):
         self.context = context
 
     @property
-    def show_alert(self):
-        if safe_hasattr(self.context, 'show_alert'):
-            return self.context.show_alert
+    def alert_show(self):
+        if safe_hasattr(self.context, 'alert_show'):
+            return self.context.alert_show
         return None
 
-    @show_alert.setter
-    def show_alert(self, value):
-        self.context.show_alert = value
+    @alert_show.setter
+    def alert_show(self, value):
+        self.context.alert_show = value
 
     @property
     def alert_title(self):
@@ -146,3 +165,13 @@ class Alert(object):
     @alert_end_date.setter
     def alert_end_date(self, value):
         self.context.alert_end_date = value
+
+    @property
+    def alert_where_to_show(self):
+        if safe_hasattr(self.context, "alert_where_to_show"):
+            return self.context.alert_where_to_show
+        return None
+
+    @alert_where_to_show.setter
+    def alert_where_to_show(self, value):
+        self.context.alert_where_to_show = value
