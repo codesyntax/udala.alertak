@@ -29,8 +29,8 @@ class WhereToShowAlert:
         # Just an example list of content for our vocabulary,
         # this can be any static or dynamic data, a catalog result for example.
         items = [
-            VocabItem(HOME, _(u'Home')),
-            VocabItem(ALL_SITE, _(u'Only site')),
+            VocabItem(HOME, _('Home')),
+            VocabItem(ALL_SITE, _('All site')),
         ]
 
         if not IDexterityContent.providedBy(context):

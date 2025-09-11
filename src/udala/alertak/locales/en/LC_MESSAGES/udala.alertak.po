@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-05-25 17:12+0000\n"
+"POT-Creation-Date: 2025-09-11 14:44+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,3 +13,96 @@ msgstr ""
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: udala.alertak\n"
+
+#: udala/alertak/behaviors/alert.py:80
+msgid "Alert end date"
+msgstr ""
+
+#: udala/alertak/behaviors/alert.py:62
+msgid "Alert link"
+msgstr ""
+
+#: udala/alertak/behaviors/alert.py:68
+msgid "Alert link text"
+msgstr ""
+
+#: udala/alertak/behaviors/alert.py:74
+msgid "Alert start date"
+msgstr ""
+
+#: udala/alertak/behaviors/alert.py:56
+msgid "Alert text"
+msgstr ""
+
+#: udala/alertak/behaviors/alert.py:50
+msgid "Alert title"
+msgstr ""
+
+#: udala/alertak/vocabularies/where_to_show_alert.py:33
+msgid "All site"
+msgstr ""
+
+#: udala/alertak/behaviors/alert.py:57
+msgid "Give in a text for the alert"
+msgstr ""
+
+#: udala/alertak/behaviors/alert.py:51
+msgid "Give in a title for the alert"
+msgstr ""
+
+#: udala/alertak/vocabularies/where_to_show_alert.py:32
+msgid "Home"
+msgstr ""
+
+#: udala/alertak/behaviors/alert.py:44
+msgid "If checked, the alert will be shown in the site"
+msgstr ""
+
+#: udala/alertak/behaviors/alert.py:75
+msgid "If entered, the alert will be shown starting from this date"
+msgstr ""
+
+#: udala/alertak/behaviors/alert.py:81
+msgid "If entered, the alert will be shown untils this date"
+msgstr ""
+
+#: udala/alertak/behaviors/alert.py:63
+msgid "If given, the alert title will be a link to this URL"
+msgstr ""
+
+#: udala/alertak/behaviors/alert.py:69
+msgid "If given, this text will be shown as the link text"
+msgstr ""
+
+#: udala/alertak/profiles.zcml:13
+msgid "Package to configure a new udala.alertak site"
+msgstr ""
+
+#: udala/alertak/behaviors/alert.py:87
+msgid "Select the sections of the site where the alert will be shown. If none is selected, the alert will be shown in all sections."
+msgstr ""
+
+#: udala/alertak/behaviors/alert.py:43
+msgid "Show alert"
+msgstr ""
+
+#: udala/alertak/profiles.zcml:21
+msgid "Uninstall udala.alertak setup."
+msgstr ""
+
+#: udala/alertak/behaviors/alert.py:86
+msgid "Where to show the alert"
+msgstr ""
+
+#. Default: "Alerts"
+#: udala/alertak/behaviors/alert.py:29
+msgid "label_schema_alerts"
+msgstr ""
+
+#: udala/alertak/profiles.zcml:13
+msgid "udala.alertak: Install"
+msgstr ""
+
+#: udala/alertak/profiles.zcml:21
+msgid "udala.alertak: Uninstall"
+msgstr ""

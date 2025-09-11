@@ -1,111 +1,110 @@
-#--- PLEASE EDIT THE LINES BELOW CORRECTLY ---
-#SOME DESCRIPTIVE TITLE.
-#FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: \n"
 "POT-Creation-Date: 2025-09-11 14:44+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2025-09-11 16:47+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Language-Code: en\n"
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: udala.alertak\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: udala/alertak/behaviors/alert.py:80
 msgid "Alert end date"
-msgstr ""
+msgstr "Alertaren amaiera data"
 
 #: udala/alertak/behaviors/alert.py:62
 msgid "Alert link"
-msgstr ""
+msgstr "Alertaren esteka"
 
 #: udala/alertak/behaviors/alert.py:68
 msgid "Alert link text"
-msgstr ""
+msgstr "Alertaren estekaren testua"
 
 #: udala/alertak/behaviors/alert.py:74
 msgid "Alert start date"
-msgstr ""
+msgstr "Alertaren hasiera data"
 
 #: udala/alertak/behaviors/alert.py:56
 msgid "Alert text"
-msgstr ""
+msgstr "Alertaren testua"
 
 #: udala/alertak/behaviors/alert.py:50
 msgid "Alert title"
-msgstr ""
+msgstr "Alertaren izenburua"
 
 #: udala/alertak/vocabularies/where_to_show_alert.py:33
 msgid "All site"
-msgstr ""
+msgstr "Atari guztian"
 
 #: udala/alertak/behaviors/alert.py:57
 msgid "Give in a text for the alert"
-msgstr ""
+msgstr "Idatzi alertaren testua"
 
 #: udala/alertak/behaviors/alert.py:51
 msgid "Give in a title for the alert"
-msgstr ""
+msgstr "Idatzi alertaren izenburua"
 
 #: udala/alertak/vocabularies/where_to_show_alert.py:32
 msgid "Home"
-msgstr ""
+msgstr "Portada nagusian"
 
 #: udala/alertak/behaviors/alert.py:44
 msgid "If checked, the alert will be shown in the site"
-msgstr ""
+msgstr "Aukeratuta badago, alerta erakutsi egingo da"
 
 #: udala/alertak/behaviors/alert.py:75
 msgid "If entered, the alert will be shown starting from this date"
-msgstr ""
+msgstr "Data idatziz gero, alerta data honetatik aurrera agertuko da"
 
 #: udala/alertak/behaviors/alert.py:81
 msgid "If entered, the alert will be shown untils this date"
-msgstr ""
+msgstr "Data idatziz gero, alerta data honetaraino agertuko da"
 
 #: udala/alertak/behaviors/alert.py:63
 msgid "If given, the alert title will be a link to this URL"
-msgstr ""
+msgstr "Idatziz gero, helbide honetarako esteka agertuko da alertan"
 
 #: udala/alertak/behaviors/alert.py:69
 msgid "If given, this text will be shown as the link text"
-msgstr ""
+msgstr "Idatziz gero, estekaren testu gisa erabiliko da"
 
 #: udala/alertak/profiles.zcml:13
 msgid "Package to configure a new udala.alertak site"
-msgstr ""
+msgstr "udala.alertak instalatzeko paketea"
 
 #: udala/alertak/behaviors/alert.py:87
 msgid "Select the sections of the site where the alert will be shown. If none is selected, the alert will be shown in all sections."
-msgstr ""
+msgstr "Aukeratu atariko zein tokitan erakutsiko den alerta."
 
 #: udala/alertak/behaviors/alert.py:43
 msgid "Show alert"
-msgstr ""
+msgstr "Erakutsi alerta"
 
 #: udala/alertak/profiles.zcml:21
 msgid "Uninstall udala.alertak setup."
-msgstr ""
+msgstr "udala.alertak desinstalatu"
 
 #: udala/alertak/behaviors/alert.py:86
 msgid "Where to show the alert"
-msgstr ""
+msgstr "Alerta non erakutsi"
 
 #. Default: "Alerts"
 #: udala/alertak/behaviors/alert.py:29
 msgid "label_schema_alerts"
-msgstr ""
+msgstr "Alerta"
 
 #: udala/alertak/profiles.zcml:13
 msgid "udala.alertak: Install"
-msgstr ""
+msgstr "udala.alertak: instalatu"
 
 #: udala/alertak/profiles.zcml:21
 msgid "udala.alertak: Uninstall"
-msgstr ""
+msgstr "udala.alertak: desinstalatu"

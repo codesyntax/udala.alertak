@@ -2,19 +2,20 @@
     xmlns="http://namespaces.zope.org/zope"
     xmlns:browser="http://namespaces.zope.org/browser"
     xmlns:plone="http://namespaces.plone.org/plone"
-    i18n_domain="udala.alertak">
+    i18n_domain="udala.alertak"
+    >
 
- <!-- -*- extra stuff goes here -*- -->
+  <!-- -*- extra stuff goes here -*- -->
 
   <browser:viewlet
-     name="alert-viewlet"
-     for="plone.app.contenttypes.interfaces.IDocument"
-     manager="plone.app.layout.viewlets.interfaces.IAboveContentTitle"
-     layer="udala.alertak.interfaces.IIBrowserLayer"
-     class=".alert_viewlet.AlertViewlet"
-     template="alert-viewlet.pt"
-     permission="zope2.View"
-     />
+      name="alert-viewlet"
+      for="*"
+      manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+      class=".alert_viewlet.AlertViewlet"
+      template="alert-viewlet.pt"
+      permission="zope2.View"
+      layer="udala.alertak.interfaces.IBrowserLayer"
+      />
 
 
 </configure>
