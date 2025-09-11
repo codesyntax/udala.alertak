@@ -13,14 +13,15 @@
 
   <!-- -*- extra stuff goes here -*- -->
 
-    <plone:behavior
-        name="udala.alertak.alert"
-        title="Alert"
-        description="This behavior provides fields to show an alert on the frontpage of a site"
-        provides=".alert.IAlert"
-        factory=".alert.Alert"
-        marker=".alert.IAlertMarker"
-        />
+  <plone:behavior
+      name="udala.alertak.alert"
+      title="Alert"
+      description="This behavior provides fields to show an alert on the frontpage of a site"
+      factory=".alert.Alert"
+      provides=".alert.IAlert"
+      for="plone.base.interfaces.INavigationRoot"
+      marker=".alert.IAlertMarker"
+      />
 
 
 </configure>
