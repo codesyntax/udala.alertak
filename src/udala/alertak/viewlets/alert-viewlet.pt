@@ -2,7 +2,7 @@
   <p class="d-inline h5">
     ${view/navigation_root/alert_title}
   </p>
-  <p>
+  <p tal:condition="view/navigation_root/alert_text">
     ${structure:view/navigation_root/alert_text/output}
   </p>
   <p class="d-inline" tal:condition="view/navigation_root/alert_link">
