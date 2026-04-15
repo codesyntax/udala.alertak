@@ -1,18 +1,14 @@
-# -*- coding: utf-8 -*-
-
-from udala.alertak import _
 from plone import schema
+from plone.app.textfield import RichText
 from plone.autoform.interfaces import IFormFieldProvider
 from plone.supermodel import model
 from Products.CMFPlone.utils import safe_hasattr
-from zope.component import adapter
-from zope.interface import Interface
-from zope.interface import implementer
-from zope.interface import provider
 from udala.alertak import _
-from plone.app.textfield import RichText
 from udala.alertak.vocabularies.where_to_show_alert import HOME
-from plone.supermodel import model
+from zope.component import adapter
+from zope.interface import implementer
+from zope.interface import Interface
+from zope.interface import provider
 
 
 class IAlertMarker(Interface):
@@ -21,8 +17,7 @@ class IAlertMarker(Interface):
 
 @provider(IFormFieldProvider)
 class IAlert(model.Schema):
-    """
-    """
+    """ """
 
     model.fieldset(
         "alerts",
@@ -40,39 +35,39 @@ class IAlert(model.Schema):
     )
 
     alert_show = schema.Bool(
-        title=_('Show alert'),
-        description=_('If checked, the alert will be shown in the site'),
+        title=_("Show alert"),
+        description=_("If checked, the alert will be shown in the site"),
         required=False,
         default=False,
     )
 
     alert_title = schema.TextLine(
-        title=_('Alert title'),
-        description=_('Give in a title for the alert'),
+        title=_("Alert title"),
+        description=_("Give in a title for the alert"),
         required=False,
     )
 
     alert_text = RichText(
-        title=_('Alert text'),
-        description=_('Give in a text for the alert'),
+        title=_("Alert text"),
+        description=_("Give in a text for the alert"),
         required=False,
     )
 
     alert_link = schema.TextLine(
-        title=_('Alert link'),
-        description=_('If given, the alert title will be a link to this URL'),
+        title=_("Alert link"),
+        description=_("If given, the alert title will be a link to this URL"),
         required=False,
     )
 
     alert_link_text = schema.TextLine(
-        title=_('Alert link text'),
-        description=_('If given, this text will be shown as the link text'),
+        title=_("Alert link text"),
+        description=_("If given, this text will be shown as the link text"),
         required=False,
     )
 
     alert_start_date = schema.Datetime(
-        title=_('Alert start date'),
-        description=_('If entered, the alert will be shown starting from this date'),
+        title=_("Alert start date"),
+        description=_("If entered, the alert will be shown starting from this date"),
         required=False,
     )
 
@@ -84,21 +79,25 @@ class IAlert(model.Schema):
 
     alert_where_to_show = schema.Choice(
         title=_("Where to show the alert"),
-        description=_("Select the sections of the site where the alert will be shown. If none is selected, the alert will be shown in all sections."),
+        description=_(
+            "Select the sections of the site where the alert will be shown. "
+            "If none is selected, the alert will be shown in all sections."
+        ),
         required=False,
         vocabulary="udala.alertak.WhereToShowAlert",
-        default=HOME
+        default=HOME,
     )
+
 
 @implementer(IAlert)
 @adapter(IAlertMarker)
-class Alert(object):
+class Alert:
     def __init__(self, context):
         self.context = context
 
     @property
     def alert_show(self):
-        if safe_hasattr(self.context, 'alert_show'):
+        if safe_hasattr(self.context, "alert_show"):
             return self.context.alert_show
         return None
 

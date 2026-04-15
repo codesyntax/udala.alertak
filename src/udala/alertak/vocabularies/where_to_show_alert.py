@@ -1,11 +1,9 @@
-# -*- coding: utf-8 -*-
-
 # from plone import api
-from zope.schema.interfaces import IVocabularyFactory
-from zope.interface import implementer
-from udala.alertak import _
 from plone.dexterity.interfaces import IDexterityContent
+from udala.alertak import _
 from zope.globalrequest import getRequest
+from zope.interface import implementer
+from zope.schema.interfaces import IVocabularyFactory
 from zope.schema.vocabulary import SimpleTerm
 from zope.schema.vocabulary import SimpleVocabulary
 
@@ -22,15 +20,14 @@ class VocabItem:
 
 @implementer(IVocabularyFactory)
 class WhereToShowAlert:
-    """
-    """
+    """ """
 
     def __call__(self, context):
         # Just an example list of content for our vocabulary,
         # this can be any static or dynamic data, a catalog result for example.
         items = [
-            VocabItem(HOME, _('Home')),
-            VocabItem(ALL_SITE, _('All site')),
+            VocabItem(HOME, _("Home")),
+            VocabItem(ALL_SITE, _("All site")),
         ]
 
         if not IDexterityContent.providedBy(context):

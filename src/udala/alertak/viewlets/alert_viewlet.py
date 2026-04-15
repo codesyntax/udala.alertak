@@ -1,13 +1,11 @@
-# -*- coding: utf-8 -*-
-
-from plone.app.layout.viewlets import ViewletBase
-from plone import api
-from plone.memoize.view import memoize
 from datetime import datetime
+from plone import api
+from plone.app.layout.viewlets import ViewletBase
+from plone.memoize.view import memoize
 from udala.alertak.vocabularies.where_to_show_alert import HOME
 
-class AlertViewlet(ViewletBase):
 
+class AlertViewlet(ViewletBase):
     def update(self):
         self.message = self.get_message()
 
@@ -15,7 +13,7 @@ class AlertViewlet(ViewletBase):
         return "My message"
 
     def index(self):
-        return super(AlertViewlet, self).render()
+        return super().render()
 
     @property
     @memoize
@@ -26,10 +24,11 @@ class AlertViewlet(ViewletBase):
         now = datetime.now()
 
         if self.navigation_root.alert_show:
-            if self.navigation_root.alert_where_to_show is HOME:
-                if self.context.absolute_url() != self.navigation_root.absolute_url():
-                    return False
-
+            if (
+                self.navigation_root.alert_where_to_show is HOME
+                and self.context.absolute_url() != self.navigation_root.absolute_url()
+            ):
+                return False
 
             if (
                 self.navigation_root.alert_start_date

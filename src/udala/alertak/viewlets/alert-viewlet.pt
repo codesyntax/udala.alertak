@@ -1,17 +1,23 @@
-<div class="udala-alert d-block" tal:condition="view/show">
+<div class="udala-alert d-block"
+     tal:condition="view/show"
+>
   <p class="d-inline h5">
     ${view/navigation_root/alert_title}
   </p>
   <p tal:condition="view/navigation_root/alert_text">
     ${structure:view/navigation_root/alert_text/output}
   </p>
-  <p class="d-inline" tal:condition="view/navigation_root/alert_link">
+  <p class="d-inline"
+     tal:condition="view/navigation_root/alert_link"
+  >
     <a href="${view/navigation_root/alert_link}">
       <tal:text condition="view/navigation_root/alert_link_text">
         ${view/navigation_root/alert_link_text}
       </tal:text>
       <tal:text condition="not:view/navigation_root/alert_link_text">
-        <span tal:omit-tag="" i18n:translate="">Read more</span>
+        <span tal:omit-tag=""
+              i18n:translate=""
+        >Read more</span>
       </tal:text>
     </a>
   </p>
